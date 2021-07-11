@@ -1,41 +1,56 @@
 @import "variables"
-body
-    display: flex
-    background: $main-color
+@import "fonts"
 
-////@import "~swiper/swiper"
-//@import "fonts"
-//@import "../node_modules/swiper/swiper"
-//
-//*, :before, :after
-//  box-sizing: border-box
-//
-//button
-//  padding: 0
-//  &:hover
-//    cursor: pointer
-//
-//ul, li
-//  padding: 0
-//  margin: 0
-//
-//h1,h2,h3,h4
-//  margin: 0
-//  margin-bottom: .5rem
-//  line-height: 1.2
-//  font-weight: 500
-//
-//a
-//  text-decoration: none
-//  &:hover
-//    text-decoration: underline
-//    cursor: pointer
-//
-//@import "components/swiper"
-//@import "components/btn"
-//@import "components/logo"
-//@import "components/menu"
-//@import "components/dash"
+*, :before, :after
+  box-sizing: border-box
+
+input:focus
+  outline: none
+  border: 0 none
+
+body
+  background: $main-color
+  display: flex
+  flex-direction: column
+  margin: 0
+  color: $sec-color
+
+@import "../node_modules/swiper/swiper"
+
+button
+  padding: 0
+  &:hover
+    cursor: pointer
+
+ul
+  list-style: none
+
+ul, li
+  color: $sec-color
+  padding: 0
+  margin: 0
+
+svg path
+  fill: $sec-color
+
+h1,h2,h3,h4
+  margin: 0 0 .5rem 0
+  line-height: 1.2
+  font-weight: 500
+
+a
+  color: $sec-color
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+    cursor: pointer
+
+@import "components/container"
+@import "components/nav"
+@import "components/logo"
+@import "components/swiper"
+@import "components/search"
+@import "components/action_gr"
 //
 //body
 //  display: flex
@@ -44,6 +59,6 @@ body
 //  color: $sub-color
 //
 //
-//@import "blocks/header"
-//@import "blocks/main"
+@import "blocks/header"
+@import "blocks/main"
 //@import "blocks/footer"
