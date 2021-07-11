@@ -1,0 +1,54 @@
+.item
+
+  &__wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background: $bg-light
+    padding: 12px 12px 34px
+    border-radius: 12px
+    margin-bottom: 12px
+
+  &__header
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__sale
+    padding: 2px 8px
+    background: $main-color
+    border-radius: 12px
+    font-family: $SSPro-font
+    font-size: 14px
+
+  &__like
+    background: none
+    border: 0 none
+    outline: none
+
+  &__img
+    mix-blend-mode: multiply
+
+  &__price
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 12px
+
+    &--new
+      font-family: $SSPro-font
+      font-weight: bold
+      font-size: 16px
+      margin-right: 12px
+
+    &--old
+      font-family: $SSPro-font
+      font-size: 12px
+      text-decoration: line-through
+      color: $bg-color
+
+    &__name
+      font-family: $RW-font
+      font-size: 12px

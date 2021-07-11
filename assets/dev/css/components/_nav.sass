@@ -11,3 +11,23 @@
   &__point
     padding: 0 18px
     font-family: $RW-font
+
+  &__title
+    font-weight: bold
+    font-size: 18px
+    margin-bottom: 20px
+
+  .footer &
+    align-items: flex-start
+
+    &__point
+      display: flex
+      flex-direction: column
+
+    &__link:not(:last-child)
+      margin-bottom: 16px
+
+
+
+  @media screen and (max-width: $mini-desc)
+    padding: 20px 0

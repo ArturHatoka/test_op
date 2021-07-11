@@ -1,0 +1,51 @@
+.products
+  &__wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    grid-column-gap: 40px
+    grid-row-gap: 40px
+
+    &.closed
+      margin-bottom: 80px
+
+      & .products__block:nth-child(n+12), .promo:nth-child(n+12)
+        display: none
+
+  &__promo
+    grid-column-start: 1
+    grid-column-end: 6
+
+
+  @media screen and (max-width: $mini-desc)
+    &__wrapper
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-column-gap: 40px
+      grid-row-gap: 40px
+
+      &.closed
+        margin-bottom: 80px
+
+        & .products__block:nth-child(n+12), .promo:nth-child(n+12)
+          display: none
+
+    &__promo
+      grid-column-start: 1
+      grid-column-end: 5
+
+.promo
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 40px
+
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 280px
+    border-radius: 16px
+    font-family: $RW-font
+    font-weight: bold
+    font-size: 24px
+
+@import "item"
