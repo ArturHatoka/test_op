@@ -1,0 +1,29 @@
+.catalog
+  &__wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    grid-column-gap: 40px
+    grid-row-gap: 40px
+
+    &.closed
+      margin-bottom: 80px
+
+      & .catalog__block:nth-child(n+11)
+        display: none
+
+
+  &__block
+    height: 200px
+    border-radius: 16px
+    padding: 24px 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+    font-family: $SSPro-font
+    font-weight: bold
+    font-size: 20px
+    text-align: center
+
+  &__title
+    margin-top: 16px
