@@ -1,0 +1,132 @@
+.apartments
+  display: flex
+  padding: 0 5vw
+  align-items: center
+  justify-content: space-between
+  flex-direction: row
+
+  &__block
+    display: flex
+    width: 50%
+    flex-direction: column
+    align-items: center
+    &--main
+      align-items: flex-start
+    &--sec
+      position: relative
+      flex-direction: row
+      align-items: center
+      justify-content: flex-end
+
+  &__title
+    color: $main-color
+    font-family: $federo-font
+    font-size: 60px
+    margin-bottom: 30px
+    font-weight: 300
+    text-align: start
+    letter-spacing: 3px
+
+  &__desc
+    color: $white
+    font-family: $myseo-font
+    font-size: 18px
+    text-align: start
+    max-width: 550px
+    font-weight: 300
+    padding-bottom: 5vh
+    margin-bottom: 0
+    line-height: 1.5
+
+  &__btn
+    font-family: $myseo-font
+    font-size: 18px
+
+  &__info
+    max-width: 170px
+    font-family: $myseo-font
+    color: $white
+    font-size: 24px
+    font-weight: 500
+
+  &__play
+    position: relative
+    padding: 0
+    margin: 0 60px 0 0
+    background: rgba($main-color, 0.4)
+    border-top: 13px solid transparent
+    border-bottom: 13px solid transparent
+    border-right: 0 solid transparent
+    border-left: 22px solid $main-color
+    box-shadow: 0 0 79px 43px rgba($main-color, 0.6)
+    z-index: auto
+    &:focus
+      outline: 0
+    &:before
+      content: ''
+      display: block
+      background: url('/images/ic-waves-big.webp') center center no-repeat
+      background-size: cover
+      width: 158px
+      height: 185px
+      right: 0
+      top: 0
+      position: absolute
+      transform: translate(33%, -50%)
+
+@media screen and (max-width: 1024px)
+  .apartments
+    flex-direction: column
+    justify-content: center
+
+    &__block
+      width: 100%
+
+      &--sec
+        padding-top: 12.5%
+
+@media screen and (max-width: 768px)
+  .apartments
+    //background: url("../img/bg-3-2.jpg") center center no-repeat
+    background-size: cover
+    &__title
+      text-align: center
+      font-size: 37px
+    &__desc
+      font-size: 16px
+    &__info
+      font-size: 18px
+      max-width: 120px
+
+@media screen and (max-width: 425px)
+  .apartments
+    justify-content: flex-start
+    padding-top: 100px
+    &__block
+      align-items: center
+      &--sec
+        justify-content: center
+        padding-top: 30%
+
+    &__desc
+      text-align: center
+      padding-left: 5vw
+      padding-right: 5vw
+
+    &__wave
+      &--sm
+        width: 96px
+        height: 96px
+        right: -34px
+        top: -48px
+        & svg
+          width: 96px
+          height: 96px
+      &--lg
+        width: 144px
+        height: 144px
+        right: -59px
+        top: -73px
+        & svg
+          width: 144px
+          height: 144px

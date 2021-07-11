@@ -1,0 +1,159 @@
+.infrastructure
+  //background: url("../img/bg-4-new.jpg") center center no-repeat, rgba(0,0,0, 0.55)
+  background-blend-mode: multiply
+  background-size: cover
+  align-items: flex-start
+
+  &__title
+    color: $main-color
+    font-family: $federo-font
+    font-size: 75px
+    font-weight: 400
+    letter-spacing: 3.75px
+    margin-left: 8vw
+
+  &__slider
+    width: 100%
+    overflow: visible
+    z-index: auto
+    max-height: 35%
+    padding-left: 8vw
+
+  &__slide
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-direction: column
+
+  &__wrapper
+    z-index: auto
+
+  &__counter
+    font-family: $federo-font
+    color: $main-color
+    margin-top: 30px
+    width: 50%
+    display: flex
+    align-items: flex-end
+    justify-content: flex-start
+
+  &__current
+    font-size: 69px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 70px
+    line-height: .67
+
+  &__dash
+    font-size: 22px
+    line-height: 1
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 16px
+
+  &__all
+    font-size: 29px
+    line-height: 0.75
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 26px
+
+  &__prev, &__next
+    width: 49px
+    height: 49px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 3px solid $white
+    border-radius: 50%
+    background: transparent
+    &:focus
+      outline: none
+
+    & svg
+      width: 20px
+      height: 20px
+
+  &__prev
+    margin-right: 80px
+    & svg
+      transform: rotate(90deg) translateY(10%)
+      fill: #fff
+
+  &__next
+    margin-left: 80px
+    & svg
+      transform: rotate(-90deg) translateY(10%)
+      fill: #fff
+
+  &__count
+    color: $white
+    font-family: $myseo-font
+    font-size: 46px
+    font-weight: 500
+    display: flex
+    align-items: flex-end
+    margin-bottom: 50px
+
+  &__metric
+    color: $white
+    font-family: $myseo-font
+    font-size: 26px
+    font-weight: 300
+
+  &__desc
+    color: $white
+    font-family: $myseo-font
+    font-size: 18px
+    font-weight: 300
+    max-width: 550px
+
+@media screen and (max-width: 768px)
+  .infrastructure
+    &__title
+      font-size: 37px
+    &__prev
+      margin-right: 45px
+    &__next
+      margin-left: 45px
+    &__count
+      & img
+        max-width: 70vw
+        height: auto
+    &__desc
+      font-size: 16px
+    &__metric
+      font-size: 19px
+    &__current
+      font-size: 60px
+    &__all
+      font-size: 25px
+    &__dash
+      font-size: 20px
+    &__prev, &__next
+      width: 43px
+      height: 43px
+
+@media screen and (max-width: 425px)
+  .infrastructure
+    padding-top: 100px
+    justify-content: flex-start
+    align-items: center
+
+    &__title
+      margin-left: 0
+      text-align: center
+      font-size: 26px
+      margin-bottom: 15vh
+      letter-spacing: 2px
+      & span
+        font-size: 37px
+    &__count
+      & img
+        max-width: 60vw
+    &__metric
+      font-size: 18px
+

@@ -1,0 +1,89 @@
+.fScreen
+  &__request
+    display: none
+  &__logo
+    display: none
+
+  &__btn
+    font-family: $myseo-font
+    font-size: 18px
+
+
+@media screen and (max-width: 768px)
+  .fScreen
+    background-position-x: 70%
+    &__logo
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-bottom: 35px
+      max-width: 80vw
+      & img
+        width: 100%
+        max-width: 400px
+        height: auto
+
+    &__title
+      font-size: 37px
+
+    &__desc
+      font-size: 16px
+      max-width: 440px
+
+@media screen and (max-width: 425px)
+  .fScreen
+    &__title
+      font-size: 26px
+      & span
+        font-size: 37px
+        letter-spacing: 2px
+    &__request
+      position: absolute
+      top: 30px
+      right: 30px
+      z-index: 11
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      justify-content: center
+
+    &__link
+      color: $white
+      font-family: $federo-font
+      font-size: 24px
+      &:hover
+        color: $white
+
+    &__Btn
+      padding: 0
+      background: transparent
+      color: $main-color
+      font-family: $myseo-font
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      border: 0 none
+      letter-spacing: 0.79px
+      position: relative
+      &:focus
+        outline: 0
+    &__icWave
+      position: absolute
+      left: -15px
+      bottom: 5px
+      width: 5px
+      height: 5px
+      background: $main-color
+      border-radius: 50%
+      box-shadow: 0 0 7px 3px rgba($main-color, 0.5)
+
+      &:before
+        content: ''
+        display: block
+        background: url('/images/ic-waves.webp') center center no-repeat
+        background-size: cover
+        width: 35px
+        height: 35px
+        right: 0
+        position: absolute
+

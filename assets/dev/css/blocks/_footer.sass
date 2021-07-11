@@ -1,0 +1,105 @@
+.footer
+  position: absolute
+  right: 0
+  bottom: 0
+  top: 0
+
+  &__mail
+    position: absolute
+    bottom: 45px
+    z-index: 11
+    display: flex
+    align-items: center
+    justify-content: center
+    left: calc(-100vw + 45px)
+
+    & img
+      max-width: 100%
+      max-height: 100%
+
+  &__phone
+    position: absolute
+    right: 50px
+    bottom: 45px
+    z-index: 11
+    display: flex
+    align-items: center
+    justify-content: center
+
+    & img
+      max-width: 100%
+      max-height: 100%
+
+  &__request
+    width: max-content
+    position: absolute
+    right: 50px
+    top: 50px
+    z-index: 11
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: center
+
+  &__link
+    color: $white
+    font-family: $federo-font
+    font-size: 24px
+    transition: .3s
+    &:hover
+      color: $white
+
+  &__btn
+    padding: 0
+    background: transparent
+    color: $main-color
+    font-family: $myseo-font
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    border: 0 none
+    letter-spacing: 0.79px
+    position: relative
+    &:focus
+      outline: 0
+
+  &__icWave
+    position: absolute
+    left: -15px
+    bottom: 5px
+    width: 5px
+    height: 5px
+    background: $main-color
+    border-radius: 50%
+    box-shadow: 0 0 7px 3px rgba($main-color, 0.5)
+
+    &:before
+      content: ''
+      display: block
+      background: url('/images/ic-waves.webp') center center no-repeat
+      background-size: cover
+      width: 35px
+      height: 35px
+      right: 0
+      position: absolute
+
+
+
+@media screen and (max-width: 768px)
+  .footer
+    &__mail
+      left: calc(-100vw + 25px)
+      bottom: 30px
+
+    &__phone
+      right: 30px
+      bottom: 30px
+
+  .header.show
+    &~.footer .footer__link
+      color: $sup-color
+
+@media screen and (max-width: 425px)
+  .footer
+    &__mail, &__phone, &__request
+      display: none

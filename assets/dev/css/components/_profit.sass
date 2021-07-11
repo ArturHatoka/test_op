@@ -1,0 +1,80 @@
+.profit
+  &__absolute
+    position: absolute
+    top: 10vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  &__wrap
+    display: flex
+    width: 100%
+    align-items: stretch
+    justify-content: space-between
+    height: 100%
+
+  &__block
+    display: flex
+    width: 50%
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+    height: 100%
+
+  &__title
+    color: $main-color
+    font-family: $federo-font
+    font-size: 60px
+    margin-bottom: 30px
+    font-weight: 300
+    text-align: center
+    letter-spacing: 3px
+
+  &__desc
+    color: $white
+    font-family: $myseo-font
+    font-size: 20px
+    text-align: center
+    max-width: 950px
+    font-weight: 300
+    padding: 5vh 0 15vh
+    margin-bottom: 0
+
+  &__btn
+    width: 290px
+    font-family: $myseo-font
+    font-size: 18px
+    margin-bottom: 15%
+
+@media screen and (max-width: 768px)
+  .profit
+    &__wrap
+      flex-wrap: wrap
+    &__block
+      width: 100%
+      height: 50%
+
+      &:first-child
+        & .profit__btn
+          position: absolute
+          top: 65%
+
+    &__title
+      font-size: 28px
+      letter-spacing: 2px
+
+
+    &__desc
+      font-size: 16px
+      padding: 5vh 10vw 10vh
+    &__btn
+      font-size: 17px
+
+@media screen and (max-width: 425px)
+  .profit
+    &__absolute
+      top: 2vh
+    &__title
+      margin-bottom: 0
+      max-width: 300px

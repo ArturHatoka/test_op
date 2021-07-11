@@ -1,0 +1,109 @@
+.menu
+  display: flex
+  flex-direction: column
+  width: 100%
+  padding-left: 30px
+  padding-right: 15px
+
+  &__header
+    display: flex
+    align-items: center
+
+  &__title
+    padding-left: 10px
+    font-family: $federo-font
+    font-size: 20px
+
+  &__btn
+    margin-left: 20px
+    width: 50px
+    height: 50px
+    box-shadow: 0 0 34px 26px rgba(193, 193, 193, 0.19)
+
+    &:focus
+      box-shadow: 0 0 0 0.15rem rgba(193, 193, 193, 0.25)
+
+  &__list
+    list-style: none
+    padding-left: 10px
+
+  &__item
+    padding-bottom: 12px
+
+  &__link
+    position: relative
+    display: flex
+    align-items: center
+    color: $sub-color
+    font-weight: 300
+    font-family: $myseo-font
+    letter-spacing: 0.5px
+    padding: 0
+    border: 0 none
+    background: transparent
+    transition: .3s
+    font-size: 16px
+    &:before
+      position: relative
+      content: ''
+      display: flex
+      width: 0
+      height: 0
+      margin-right: 0
+      border-radius: 50%
+      box-shadow: 0 0 0 0
+      transition: .3s
+
+    &:focus
+      outline: 0
+
+    &.active
+      &:before
+        width: 5px
+        height: 5px
+        background: $main-color
+        margin-right: 17.5px
+        box-shadow: 0 0 7px 3px rgba($main-color, 0.5)
+
+  &__bottom &__link
+    padding-left: 10px
+
+
+.menu
+  &__btn
+    position: fixed
+    left: calc(100% + 50px)
+    top: 30px
+    margin-left: 0
+    transition: .3s
+
+.header.show
+  .menu__btn
+    top: 25px
+    left: calc(50% - 25px)
+
+  .btn__line
+    &:before
+      transform: rotate(-45deg)
+      top: -3px
+      width: 50%
+    &:after
+      transform: rotate(45deg)
+      bottom: -3px
+      width: 50%
+
+@media screen and (max-width: 768px)
+  .menu
+    &__btn
+      left: calc(100% + 30px)
+      top: 30px
+
+  .header.show
+    .menu__btn
+      top: 30px
+      left: 30px
+
+@media screen and (max-width: 425px)
+  .header.show
+    .menu__btn
+      left: calc(100% - 80px)
